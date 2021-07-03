@@ -9,10 +9,10 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import {makeStyles, useTheme} from '@material-ui/core/styles';
 
-import Menu from './Menu';
+import Sidebar from './Sidebar';
 import Contenido from './Contenido';
 
-const drawerWidth = 240;
+const drawerWidth = 300;
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -65,7 +65,7 @@ const Main = (props) => {
 	return (
 		<div className={classes.root}>
 			<CssBaseline />
-			<AppBar position='fixed' className={classes.appBar}>
+			<AppBar position='fixed' className={classes.appBar} color='text' elevation='disabled'>
 				<Toolbar>
 					<IconButton
 						color='inherit'
@@ -95,7 +95,7 @@ const Main = (props) => {
 						ModalProps={{
 							keepMounted: true, // Better open performance on mobile.
 						}}>
-						{<Menu />}
+						{<Sidebar />}
 					</Drawer>
 				</Hidden>
 				<Hidden smDown implementation='css'>
@@ -105,7 +105,7 @@ const Main = (props) => {
 						}}
 						variant='permanent'
 						open>
-						{<Menu />}
+						{<Sidebar />}
 					</Drawer>
 				</Hidden>
 			</nav>

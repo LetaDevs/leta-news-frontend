@@ -1,4 +1,5 @@
 import React from 'react';
+import './css/contenido.css';
 
 const Contenido = () => {
 	return (
