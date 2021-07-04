@@ -9,6 +9,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import {makeStyles, useTheme} from '@material-ui/core/styles';
 
+import Navbar from './Navbar';
 import Sidebar from './Sidebar';
 import Contenido from './Contenido';
 
@@ -33,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
 			width: `calc(100% - ${drawerWidth}px)`,
 			marginLeft: drawerWidth,
 		},
+		backgroundColor: '#dfe6e9',
 	},
 	menuButton: {
 		marginRight: theme.spacing(2),
@@ -41,7 +43,9 @@ const useStyles = makeStyles((theme) => ({
 		},
 	},
 	// necessary for content to be below app bar
-	toolbar: theme.mixins.toolbar,
+	toolbar: {
+		height: '50px',
+	},
 	drawerPaper: {
 		width: drawerWidth,
 	},
@@ -65,21 +69,8 @@ const Main = (props) => {
 	return (
 		<div className={classes.root}>
 			<CssBaseline />
-			<AppBar position='fixed' className={classes.appBar} color='text' elevation='disabled'>
-				<Toolbar>
-					<IconButton
-						color='inherit'
-						aria-label='open drawer'
-						edge='start'
-						onClick={handleDrawerToggle}
-						className={classes.menuButton}>
-						<MenuIcon />
-					</IconButton>
-					<Typography variant='h6' noWrap>
-						esta tipografía hay que borrarla
-					</Typography>
-				</Toolbar>
-			</AppBar>
+			<Navbar handleDrawerToggle={handleDrawerToggle} classes={classes} />
+
 			<nav className={classes.drawer} aria-label='mailbox folders'>
 				{/* The implementation can be swapped with js to avoid SEO duplication of links. */}
 				<Hidden mdUp implementation='css'>

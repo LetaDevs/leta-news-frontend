@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+.navbar-contenedor {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.criptos {
+	display: flex;
+}
+.cripto {
+	margin-right: 20px;
+	display: flex;
+	align-items: center;
+	color: #808080;
+}
+.cripto-icon {
+	width: 30px;
+	height: 30px;
+	margin-right: 5px;
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.btc {
+	background-image: url('../img/btc.svg');
+}
+.eth {
+	background-image: url('../img/eth.svg');
+}
+.ltc {
+	background-image: url('../img/ltc.svg');
+}
+.cripto-precio {
+	display: flex;
+	flex-direction: column;
+}
+.cripto-precio-precio {
+	font-weight: bold;
+}
+
+/** clima **/
+
+.clima {
+	color: #808080;
+	font-size: 20px;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+}
+.clima span {
+	margin-right: 10px;
+}
+.clima-img {
+	background-image: url('../img/clima-img.png');
+	background-position: center center;
+	background-size: cover;
+	width: 50px;
+	height: 50px;
+}
+
+@media (max-width: 769px) {
+	.cripto-icon {
+		width: 25px;
+		height: 25px;
+	}
+	.cripto-precio span {
+		font-size: 12px;
+	}
+}
+@media (max-width: 576px) {
+	.cripto-icon {
+		width: 20px;
+		height: 20px;
+	}
+	.cripto-precio span {
+		font-size: 10px;
+	}
+}

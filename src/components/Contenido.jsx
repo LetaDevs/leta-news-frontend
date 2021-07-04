@@ -4,13 +4,7 @@ import './css/contenido.css';
 const Contenido = () => {
 	return (
 		<>
-			<div className='contenido'>
-				<h2>este es el contenido</h2>
-				<h2>este es el contenido</h2>
-				<h2>este es el contenido</h2>
-				<h2>este es el contenido</h2>
-				<h2>este es el contenido</h2>
-			</div>
+			<div className='contenido'></div>
 		</>
 	);
 };
