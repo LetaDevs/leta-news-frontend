@@ -7,6 +7,9 @@ import Hidden from '@material-ui/core/Hidden';
 
 import './css/navbar.css';
 
+import Criptomonedas from './Criptomonedas';
+import Clima from './Clima';
+
 const Navbar = ({handleDrawerToggle, classes}) => {
 	return (
 		<AppBar position='fixed' className={classes.appBar} elevation='disabled'>
@@ -15,35 +18,9 @@ const Navbar = ({handleDrawerToggle, classes}) => {
 					<MenuIcon />
 				</IconButton>
 				<div className='navbar-contenedor'>
-					<div className='criptos'>
-						<div className='cripto '>
-							<div className='cripto-icon btc'></div>
-							<div className='cripto-precio'>
-								<span>BTC-USD</span>
-								<span className='cripto-precio-precio'>$32,234.00</span>
-							</div>
-						</div>
-						<div className='cripto '>
-							<div className='cripto-icon eth'></div>
-							<div className='cripto-precio'>
-								<span>ETH-USD</span>
-								<span className='cripto-precio-precio'>$32,234.00</span>
-							</div>
-						</div>
-						<div className='cripto '>
-							<div className='cripto-icon ltc'></div>
-							<div className='cripto-precio'>
-								<span>LTC-USD</span>
-								<span className='cripto-precio-precio'>$32,234.00</span>
-							</div>
-						</div>
-					</div>
+					<Criptomonedas />
 					<Hidden only='xs'>
-						<div className='clima'>
-							<span className='clima-ciudad'>Bogota</span>
-							<span className='clima-temperatura'>28°C</span>
-							<div className='clima-img'></div>
-						</div>
+						<Clima />
 					</Hidden>
 				</div>
 			</Toolbar>
