@@ -6,7 +6,7 @@ const Menu = () => {
 	return (
 		<div className='menu'>
 			<nav>
-				<NavLink to='/general' exact activeClassName='nav-link-active' className='nav-link '>
+				<NavLink to='/general' exact activeClassName='nav-link-active' className='nav-link'>
 					<div className='nav-link-icon nav-link-general'></div> General
 				</NavLink>
 				<NavLink to='/deportes' exact activeClassName='nav-link-active' className='nav-link'>
@@ -27,7 +27,7 @@ const Menu = () => {
 				<NavLink to='/despues' exact activeClassName='nav-link-active' className='nav-link'>
 					<div className='nav-link-icon nav-link-mas-tarde'></div> Leer más tarde
 				</NavLink>
-				<NavLink to='/cerrar-sesion' exact activeClassName='nav-link-active' className='nav-link'>
+				<NavLink to='/iniciar-sesion' exact activeClassName='nav-link-active' className='nav-link'>
 					<div className='nav-link-icon nav-link-cerrar-sesion'></div> Cerrar sesión
 				</NavLink>
 			</nav>
