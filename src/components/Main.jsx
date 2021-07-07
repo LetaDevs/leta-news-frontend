@@ -67,8 +67,6 @@ const Main = (props) => {
 	// ------------------------------ agregar código a partir de aquí -------------
 	const {categoria} = useParams();
 
-	console.log(categoria);
-
 	return (
 		<div className={classes.root}>
 			<CssBaseline />
