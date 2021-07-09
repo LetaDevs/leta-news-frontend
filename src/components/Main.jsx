@@ -103,7 +103,7 @@ const Main = (props) => {
 			</nav>
 			<main className={classes.content}>
 				<div className={classes.toolbar} />
-				<Contenido />
+				<Contenido categoria={categoria} />
 			</main>
 		</div>
 	);

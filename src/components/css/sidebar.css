@@ -83,6 +83,9 @@ body {
 .boton-pais:last-child {
 	margin-right: 0;
 }
+.pais-active {
+	color: #00b894;
+}
 
 /** Menu **/
 .menu {
@@ -127,8 +130,8 @@ body {
 .nav-link-entretenimiento {
 	background-image: url('../img/entertainment\ icon.svg');
 }
-.nav-link-tecnologia {
-	background-image: url('../img/technology\ icon.svg');
+.nav-link-science {
+	background-image: url('../img/science\ icon.svg');
 }
 .nav-link-mas-tarde {
 	background-image: url('../img/leer\ mas\ tarde\ icon.svg');

@@ -6,12 +6,136 @@ body {
 
 .contenedor {
 	width: 100%;
-	height: calc(100vh - 50px);
+	/* height: calc(100vh - 50px); */
 	background-color: #fff;
 	padding: 5px 20px;
 }
 .contenido {
 	width: 100%;
-	height: 100%;
+	height: auto;
 	border-top: 3px solid #ccc;
+	padding-top: 10px;
+}
+.noticia-contenedor {
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+}
+.noticia-contenedor img {
+	max-width: 100%;
+}
+.noticia-contenido {
+	border-bottom: 1px solid #ccc;
+}
+.noticia-datos {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 5px;
+}
+.noticia-autor,
+.noticia-fecha {
+	margin: 0;
+	color: #00b894;
+	font-weight: 700;
+}
+.noticia-titulo {
+	text-align: left;
+	line-height: 1.2;
+}
+.noticia-descripcion {
+	font-size: 18px;
+	margin-bottom: 40px;
+}
+.noticia-botones {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.noticia-leer {
+	background-color: #2d3436;
+	color: #fff;
+	padding: 0.5rem 1rem;
+	border-radius: 30px;
+	font-size: 20px;
+	cursor: pointer;
+	outline: none;
+	border: none;
+}
+.noticia-mas-tarde {
+	border: none;
+	outline: none;
+	background-color: transparent;
+	font-size: 18px;
+}
+
+/** tablet **/
+@media (min-width: 768px) {
+	.contenido {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+	.noticia-uno {
+		grid-column: 1 / 3;
+	}
+	.noticia-uno img {
+		width: 100%;
+	}
+	.noticias-dos-contenedor {
+		grid-column: 1 / 3;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+}
+
+/** desktop **/
+@media (min-width: 1200px) {
+	.contenido {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 20px;
+	}
+	.noticia-titulo {
+		font-size: 18px;
+	}
+	.noticia-descripcion {
+		font-size: 16px;
+	}
+	.noticia-uno {
+		grid-column: 1 / 3;
+	}
+	.noticia-uno img {
+		width: 100%;
+	}
+	.noticia-uno .noticia-leer {
+		font-size: 16px;
+		padding: 0.5rem 1rem;
+	}
+
+	.noticia-dos {
+		border-bottom: none;
+	}
+	.noticia-dos img,
+	.noticia-dos .noticia-datos {
+		display: none;
+	}
+
+	.noticia-dos .noticia-leer {
+		font-size: 14px;
+		padding: 0.5rem 1rem;
+	}
+	.noticias-dos-contenedor {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		grid-column: auto;
+	}
+
+	.noticia-tres .noticia-leer {
+		font-size: 16px;
+		padding: 0.5rem 1rem;
+	}
 }

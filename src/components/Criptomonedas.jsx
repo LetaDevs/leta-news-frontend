@@ -35,7 +35,7 @@ const Criptomonedas = () => {
 		consultarPrecios();
 	}, []);
 
-	useInterval(consultarPrecios, 5000);
+	// useInterval(consultarPrecios, 5000);
 
 	return (
 		<div className='criptos'>

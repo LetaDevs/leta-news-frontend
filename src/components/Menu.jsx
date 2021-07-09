@@ -9,20 +9,20 @@ const Menu = () => {
 				<NavLink to='/general' exact activeClassName='nav-link-active' className='nav-link'>
 					<div className='nav-link-icon nav-link-general'></div> General
 				</NavLink>
-				<NavLink to='/deportes' exact activeClassName='nav-link-active' className='nav-link'>
+				<NavLink to='/sports' exact activeClassName='nav-link-active' className='nav-link'>
 					<div className='nav-link-icon nav-link-deportes'></div> Deportes
 				</NavLink>
-				<NavLink to='/economia' exact activeClassName='nav-link-active' className='nav-link'>
-					<div className='nav-link-icon nav-link-economia'></div> Economía
+				<NavLink to='/business' exact activeClassName='nav-link-active' className='nav-link'>
+					<div className='nav-link-icon nav-link-economia'></div> Negocios
 				</NavLink>
-				<NavLink to='/salud' exact activeClassName='nav-link-active' className='nav-link'>
+				<NavLink to='/health' exact activeClassName='nav-link-active' className='nav-link'>
 					<div className='nav-link-icon nav-link-salud'></div> Salud
 				</NavLink>
-				<NavLink to='/entretenimiento' exact activeClassName='nav-link-active' className='nav-link'>
+				<NavLink to='/entertainment' exact activeClassName='nav-link-active' className='nav-link'>
 					<div className='nav-link-icon nav-link-entretenimiento'></div> Entretenimiento
 				</NavLink>
-				<NavLink to='/tecnologia' exact activeClassName='nav-link-active' className='nav-link'>
-					<div className='nav-link-icon nav-link-tecnologia'></div> Tecnología
+				<NavLink to='/science' exact activeClassName='nav-link-active' className='nav-link'>
+					<div className='nav-link-icon nav-link-science'></div> Ciencia
 				</NavLink>
 				<NavLink to='/despues' exact activeClassName='nav-link-active' className='nav-link'>
 					<div className='nav-link-icon nav-link-mas-tarde'></div> Leer más tarde

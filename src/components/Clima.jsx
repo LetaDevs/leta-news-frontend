@@ -43,7 +43,7 @@ const Clima = () => {
 		consultarClima();
 	}, [usuario]);
 
-	useInterval(consultarClima, 30000);
+	// useInterval(consultarClima, 30000);
 
 	return (
 		<div className='clima'>
