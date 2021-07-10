@@ -21,6 +21,9 @@ const Menu = () => {
 				<NavLink to='/entertainment' exact activeClassName='nav-link-active' className='nav-link'>
 					<div className='nav-link-icon nav-link-entretenimiento'></div> Entretenimiento
 				</NavLink>
+				<NavLink to='/technology' exact activeClassName='nav-link-active' className='nav-link'>
+					<div className='nav-link-icon nav-link-technology'></div> Tecnología
+				</NavLink>
 				<NavLink to='/science' exact activeClassName='nav-link-active' className='nav-link'>
 					<div className='nav-link-icon nav-link-science'></div> Ciencia
 				</NavLink>

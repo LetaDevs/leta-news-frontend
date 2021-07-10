@@ -17,7 +17,9 @@ const NoticiaUno = ({noticia, tipo}) => {
 					<h2 className='noticia-titulo'>{noticia.title}</h2>
 					<p className='noticia-descripcion'>{noticia.description}</p>
 					<div className='noticia-botones'>
-						<button className='noticia-leer'>Leer artículo</button>
+						<a href={noticia.url} className='noticia-leer' target='_blank'>
+							Leer artículo
+						</a>
 						<button className='noticia-mas-tarde'>Leer más tarde</button>
 					</div>
 				</div>

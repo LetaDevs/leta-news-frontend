@@ -130,6 +130,9 @@ body {
 .nav-link-entretenimiento {
 	background-image: url('../img/entertainment\ icon.svg');
 }
+.nav-link-technology {
+	background-image: url('../img/technology\ icon.svg');
+}
 .nav-link-science {
 	background-image: url('../img/science\ icon.svg');
 }

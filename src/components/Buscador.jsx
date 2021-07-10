@@ -1,21 +1,46 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useContext} from 'react';
 import {NoticiasContext} from '../contexts/NoticiasContext';
 import './css/sidebar.css';
 
 const Buscador = () => {
-	const {pais, setPais} = useContext(NoticiasContext);
+	const [busqueda, updateBusqueda] = useState({
+		busqueda: '',
+	});
+	const {pais, setPais, setBusqueda} = useContext(NoticiasContext);
 
 	const cambiarPais = (valor) => {
 		setPais(valor);
 	};
 
+	const handleChange = (e) => {
+		updateBusqueda({
+			...busqueda,
+			[e.target.name]: e.target.value,
+		});
+	};
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+
+		setBusqueda(busqueda.busqueda);
+		updateBusqueda({
+			busqueda: '',
+		});
+	};
+
 	return (
 		<div className='buscardor'>
 			<div className='input'>
-				<form>
+				<form onSubmit={handleSubmit}>
 					<div className='input-buscar'>
-						<input type='text' placeholder='buscar...' />
+						<input
+							type='text'
+							placeholder='buscar...'
+							name='busqueda'
+							value={busqueda.busqueda}
+							onChange={handleChange}
+						/>
 						<button type='submit'>
 							<div className='buscar-icon'></div>
 						</button>

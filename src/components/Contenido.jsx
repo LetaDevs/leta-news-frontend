@@ -4,6 +4,8 @@ import './css/contenido.css';
 
 import {NoticiasContext} from '../contexts/NoticiasContext';
 import NoticiaUno from './noticias/NoticiaUno';
+import {Hidden} from '@material-ui/core';
+import Buscador from './Buscador';
 
 const Contenido = ({categoria}) => {
 	const {noticias, setCategoria} = useContext(NoticiasContext);
@@ -15,6 +17,11 @@ const Contenido = ({categoria}) => {
 
 	return (
 		<div className='contenedor'>
+			<Hidden mdUp>
+				<div className='contenedor-buscador'>
+					<Buscador />
+				</div>
+			</Hidden>
 			<div className='contenido'>
 				<NoticiaUno noticia={noticias[1]} tipo='noticia-uno' />
 				<NoticiaUno noticia={noticias[2]} tipo='noticia-tres' />
