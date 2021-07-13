@@ -63,6 +63,22 @@ body {
 	outline: none;
 	border: none;
 	text-decoration: none;
+	display: flex;
+	align-items: center;
+}
+
+.noticia-leer .icono {
+	background-image: url('../img/arrow.svg');
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 18px;
+	height: 18px;
+	margin-left: 10px;
+	transition: all 0.1s ease;
+}
+.noticia-leer:hover .icono {
+	margin-left: 15px;
 }
 .noticia-mas-tarde {
 	border: none;

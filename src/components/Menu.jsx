@@ -1,8 +1,17 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {NavLink} from 'react-router-dom';
 import './css/sidebar.css';
 
+import {AuthContext} from '../contexts/AuthContext';
+
 const Menu = () => {
+	const {setUsuario} = useContext(AuthContext);
+
+	const cerrarSesion = () => {
+		setUsuario({});
+		localStorage.removeItem('token');
+	};
+
 	return (
 		<div className='menu'>
 			<nav>
@@ -30,7 +39,12 @@ const Menu = () => {
 				<NavLink to='/despues' exact activeClassName='nav-link-active' className='nav-link'>
 					<div className='nav-link-icon nav-link-mas-tarde'></div> Leer más tarde
 				</NavLink>
-				<NavLink to='/iniciar-sesion' exact activeClassName='nav-link-active' className='nav-link'>
+				<NavLink
+					to='/iniciar-sesion'
+					exact
+					activeClassName='nav-link-active'
+					className='nav-link'
+					onClick={cerrarSesion}>
 					<div className='nav-link-icon nav-link-cerrar-sesion'></div> Cerrar sesión
 				</NavLink>
 			</nav>
