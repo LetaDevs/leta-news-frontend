@@ -36,7 +36,7 @@ const Menu = () => {
 				<NavLink to='/science' exact activeClassName='nav-link-active' className='nav-link'>
 					<div className='nav-link-icon nav-link-science'></div> Ciencia
 				</NavLink>
-				<NavLink to='/despues' exact activeClassName='nav-link-active' className='nav-link'>
+				<NavLink to='/noticias/despues' exact activeClassName='nav-link-active' className='nav-link'>
 					<div className='nav-link-icon nav-link-mas-tarde'></div> Leer despues
 				</NavLink>
 				<NavLink
