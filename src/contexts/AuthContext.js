@@ -34,7 +34,6 @@ const AuthProvider = (props) => {
 				},
 			});
 			const datos = await consulta.json();
-			console.log(datos);
 			if (datos.code === 200) {
 				localStorage.setItem('token', JSON.stringify(datos.token));
 				setToken(datos.token);

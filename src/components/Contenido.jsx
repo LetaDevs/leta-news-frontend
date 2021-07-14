@@ -16,8 +16,6 @@ const Contenido = ({categoria}) => {
 		setCategoria(categoria);
 	}, [categoria]);
 
-	console.log(categoria);
-
 	return (
 		<div className='contenedor'>
 			<Hidden mdUp>
