@@ -10,20 +10,21 @@ import HomeRoute from './rutasPrivadas/HomeRoute';
 function App() {
 	return (
 		<div className='App'>
-			<NoticiasProvider>
-				<Router>
-					<AuthProvider>
+			<Router>
+				<AuthProvider>
+					<NoticiasProvider>
 						<div>
 							<Switch>
+								<Route exact path='/' render={() => <Redirect to='/general' />} />
 								<HomeRoute exact path='/' component={Main} />
 								<Route path='/crear-cuenta' component={CrearCuenta} />
 								<Route path='/iniciar-sesion' component={IniciarSesion} />
 								<HomeRoute path='/:categoria' component={Main} />
 							</Switch>
 						</div>
-					</AuthProvider>
-				</Router>
-			</NoticiasProvider>
+					</NoticiasProvider>
+				</AuthProvider>
+			</Router>
 		</div>
 	);
 }

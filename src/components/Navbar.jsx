@@ -12,7 +12,7 @@ import Clima from './Clima';
 
 const Navbar = ({handleDrawerToggle, classes}) => {
 	return (
-		<AppBar position='fixed' className={classes.appBar} elevation='disabled'>
+		<AppBar position='fixed' className={classes.appBar} elevation={0}>
 			<Toolbar variant='dense'>
 				<IconButton aria-label='open drawer' edge='start' onClick={handleDrawerToggle} className={classes.menuButton}>
 					<MenuIcon />

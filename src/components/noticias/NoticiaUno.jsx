@@ -1,9 +1,23 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import '../css/contenido.css';
 import 'animate.css';
 
+import {AuthContext} from '../../contexts/AuthContext';
+
 const NoticiaUno = ({noticia, tipo}) => {
+	const {usuario} = useContext(AuthContext);
 	if (!noticia) return null;
+
+	const guardarNoticia = () => {
+		const url = `${process.env.REACT_APP_BACKEND_URL}/noticias/leer-despues`;
+		fetch(url, {
+			method: 'POST',
+			body: JSON.stringify({usuarioId: usuario.id, noticiaId: noticia.id}),
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		}).catch((error) => console.log(error));
+	};
 
 	return (
 		<>
@@ -20,7 +34,10 @@ const NoticiaUno = ({noticia, tipo}) => {
 						<a href={noticia.url} className='noticia-leer' target='_blank'>
 							Leer artículo <i className='icono'></i>
 						</a>
-						<button className='noticia-mas-tarde'>Leer más tarde</button>
+						<button className='noticia-mas-tarde' onClick={guardarNoticia}>
+							<span>Leer despues</span>
+							<i className='icono'></i>
+						</button>
 					</div>
 				</div>
 			</div>
