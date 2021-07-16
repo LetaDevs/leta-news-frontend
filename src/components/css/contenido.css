@@ -21,14 +21,23 @@ body {
 	display: flex;
 	flex-direction: column;
 }
-.noticia-contenedor:hover .noticia-contenido {
-	background-color: rgb(252, 252, 252);
+.noticia-barra {
+	width: 0;
+	height: 0.2rem;
+	background-color: #00b894;
+	transition: all 0.4s ease;
+}
+.noticia-contenedor:hover .noticia-barra {
+	width: 100%;
 }
 .noticia-contenedor img {
 	max-width: 100%;
 }
 .noticia-contenido {
-	border-bottom: 0.063rem solid #ccc;
+	transition: all 0.4s ease;
+}
+.noticia-contenedor:hover .noticia-contenido {
+	background-color: #fafafa;
 }
 .noticia-datos {
 	display: flex;

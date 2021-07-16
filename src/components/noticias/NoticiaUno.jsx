@@ -40,6 +40,7 @@ const NoticiaUno = ({noticia, tipo}) => {
 						</button>
 					</div>
 				</div>
+				<div className='noticia-barra'></div>
 			</div>
 		</>
 	);
