@@ -14,15 +14,15 @@ body {
 	display: flex;
 }
 .cripto {
-	margin-right: 20px;
+	margin-right: 1.25rem;
 	display: flex;
 	align-items: center;
 	color: #808080;
 }
 .cripto-icon {
-	width: 30px;
-	height: 30px;
-	margin-right: 5px;
+	width: 1.875rem;
+	height: 1.875rem;
+	margin-right: 0.313rem;
 	background-position: center center;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -57,20 +57,20 @@ body {
 
 .clima {
 	color: #808080;
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: bold;
 	display: flex;
 	align-items: center;
 }
 .clima span {
-	margin-right: 10px;
+	margin-right: 0.625rem;
 }
 .clima-img {
 	/* background-image: url('../img/clima-img.png');
 	background-position: center center;
 	background-size: cover; */
-	width: 50px;
-	height: 50px;
+	width: 3.125rem;
+	height: 3.125rem;
 }
 .clima-img img {
 	width: 100%;
@@ -78,19 +78,19 @@ body {
 
 @media (max-width: 769px) {
 	.cripto-icon {
-		width: 25px;
-		height: 25px;
+		width: 1.563rem;
+		height: 1.563rem;
 	}
 	.cripto-precio span {
-		font-size: 12px;
+		font-size: 0.75rem;
 	}
 }
 @media (max-width: 576px) {
 	.cripto-icon {
-		width: 20px;
-		height: 20px;
+		width: 1.25rem;
+		height: 1.25rem;
 	}
 	.cripto-precio span {
-		font-size: 10px;
+		font-size: 0.625rem;
 	}
 }
