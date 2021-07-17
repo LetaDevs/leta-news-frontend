@@ -23,7 +23,7 @@ body {
 @media (min-width: 1200px) {
 	.formulario-contenedor {
 		width: 17%;
-		padding: 0 125rem;
+		padding: 0.125rem;
 	}
 }
 .titulo {
@@ -31,7 +31,7 @@ body {
 }
 .campo {
 	padding: 0.625rem;
-	margin-bottom: 125rem;
+	margin-bottom: 1.25rem;
 	display: flex;
 	flex-direction: column;
 }
@@ -58,8 +58,8 @@ label {
 }
 .titulo {
 	color: #2d3436;
-	font-size: 125rem;
-	margin-bottom: 125rem;
+	font-size: 1.25rem;
+	margin-bottom: 1.25rem;
 }
 .boton button {
 	width: 100%;
@@ -87,8 +87,9 @@ label {
 
 /** Alerta **/
 .alerta {
-	width: 100%;
+	width: 95%;
 	padding: 0.125rem;
+	margin: 0 auto;
 }
 .alerta-mensaje {
 	font-weight: bold;

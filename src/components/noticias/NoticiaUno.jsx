@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import '../css/contenido.css';
 import 'animate.css';
 
@@ -6,6 +6,7 @@ import {AuthContext} from '../../contexts/AuthContext';
 
 const NoticiaUno = ({noticia, tipo}) => {
 	const {usuario} = useContext(AuthContext);
+	const [agregada, setAgregada] = useState('');
 	if (!noticia) return null;
 
 	const guardarNoticia = () => {
@@ -17,6 +18,7 @@ const NoticiaUno = ({noticia, tipo}) => {
 				'Content-Type': 'application/json',
 			},
 		}).catch((error) => console.log(error));
+		setAgregada('agregada');
 	};
 
 	return (
@@ -34,7 +36,7 @@ const NoticiaUno = ({noticia, tipo}) => {
 						<a href={noticia.url} className='noticia-leer' target='_blank'>
 							Leer artículo <i className='icono'></i>
 						</a>
-						<button className='noticia-mas-tarde' onClick={guardarNoticia}>
+						<button className={`noticia-mas-tarde ${agregada}`} onClick={guardarNoticia}>
 							<span>Leer despues</span>
 							<i className='icono'></i>
 						</button>
