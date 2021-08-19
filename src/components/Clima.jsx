@@ -50,7 +50,7 @@ const Clima = () => {
 			<span className='clima-ciudad'>{ciudad}</span>
 			<span className='clima-temperatura'>{temp.toFixed(1)}°C</span>
 			<div className='clima-img'>
-				<img src={`http://openweathermap.org/img/wn/${icon}@4x.png`} alt='icon clima' />
+				<img src={`https://openweathermap.org/img/wn/${icon}@4x.png`} alt='icon clima' />
 			</div>
 		</div>
 	);
